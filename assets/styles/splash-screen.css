@@ -17,9 +17,18 @@ body ath-splash-screen {
     transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-body ath-splash-screen img {
-    width: 500px;
-    max-width: 500px;
+@media (max-width: 726px) {
+    body ath-splash-screen img {
+        width: 300px;
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 727px) {
+    body ath-splash-screen img {
+        width: 500px;
+        max-width: 500px;
+    }
 }
 
 body ath-splash-screen .spinner {
@@ -31,10 +40,23 @@ body ath-splash-screen .spinner {
 }
 
 body ath-splash-screen .spinner>div {
-    width: 12px;
-    height: 12px;
-    background-color: #39b54a;
-    border-radius: 100%;
+    background: #39b54a;
+    height: 24px;
+    position: relative;
+    width: 8px;
+    display: inline-block;
+    -webkit-animation: ath-bouncedelay 1s infinite ease-in-out both;
+    animation: ath-bouncedelay 1s infinite ease-in-out both;
+}
+
+body ath-splash-screen .spinner>div::after {
+    background: #39b54a;
+    content: "";
+    height: 8px;
+    left: -8px;
+    position: absolute;
+    top: 8px;
+    width: 24px;
     display: inline-block;
     -webkit-animation: ath-bouncedelay 1s infinite ease-in-out both;
     animation: ath-bouncedelay 1s infinite ease-in-out both;
