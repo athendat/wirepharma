@@ -792,6 +792,9 @@
         .home-3-wrap {
             .home3-sidebar {
                 padding-right: 0px;
+                .category-wrapper {
+                    max-width: 100vh;
+                }
             }
             .main-home3-wrapper {
                 padding-left: 0;
